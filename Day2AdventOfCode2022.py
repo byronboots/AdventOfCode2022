@@ -9,7 +9,6 @@ outcomes = {
     "BX":1, "BY":5, "BZ":9,
     "CX":7, "CY":2, "CZ":6
 }
-
 def rock_paper_scissors_strategy(strategy):
     my_total_score = 0
     for round in strategy:
@@ -19,6 +18,18 @@ def rock_paper_scissors_strategy(strategy):
 
 print(rock_paper_scissors_strategy(strategy))
 
+new_outcomes = {
+    "AX":3, "AY":4, "AZ":8,
+    "BX":1, "BY":5, "BZ":9,
+    "CX":2, "CY":6, "CZ":7
+}
+def new_strategy(strategy):
+    new_total_score = 0
+    for round in strategy:
+        new_total_score += new_outcomes[round]
+    return new_total_score
+
+print(new_strategy(strategy))
 
 # def rock_paper_scissors_score(strategy):
 #     opponent_move = ''
